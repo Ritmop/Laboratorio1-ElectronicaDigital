@@ -4,12 +4,12 @@ Linker command line:
 
 -W-3 \
   --edf=C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\dat\20230322214319_en.msgs \
-  -cn -h+dist/default/debug\Lab1.X.debug.sym \
-  --cmf=dist/default/debug\Lab1.X.debug.cmf -z -Q16F887 \
-  -oC:\Users\judah\AppData\Local\Temp\xcAsftk.\driver_tmp_3.o \
+  -cn -h+dist/default/production\Lab1.X.production.sym \
+  --cmf=dist/default/production\Lab1.X.production.cmf -z -Q16F887 \
+  -oC:\Users\judah\AppData\Local\Temp\xcAs7cc.\driver_tmp_3.o \
   --defsym=__MPLAB_BUILD=1 --fixupoverflow=error \
-  -Mdist/default/debug/Lab1.X.debug.map \
-  --md=C:\Users\judah\AppData\Local\Temp\xcAsftk.\driver_tmp_0.dat -E1 \
+  -Mdist/default/production/Lab1.X.production.map \
+  --md=C:\Users\judah\AppData\Local\Temp\xcAs7cc.\driver_tmp_0.dat -E1 \
   -ver=XC8 Compiler --acfsm=1493 -ACODE=00h-07FFhx4 -ASTRCODE=00h-01FFFh \
   -ASTRING=00h-0FFhx32 -ACONST=00h-0FFhx32 -AENTRY=00h-0FFhx32 \
   -ACOMMON=070h-07Fh -ABANK0=020h-06Fh -ABANK1=0A0h-0EFh \
@@ -22,8 +22,8 @@ Linker command line:
   -DSTRCODE=2 -DSTRING=2 -DCONST=2 -DENTRY=2 \
   -preset_vec=00h,intentry=04h,init,end_init -ppowerup=CODE -pcinit=CODE \
   -pfunctab=ENTRY -k \
-  C:\Users\judah\AppData\Local\Temp\xcAsftk.\driver_tmp_12.o \
-  dist/default/debug\Lab1.X.debug.o 
+  C:\Users\judah\AppData\Local\Temp\xcAs7cc.\driver_tmp_12.o \
+  dist/default/production\Lab1.X.production.o 
 
 Object code version is 3.11
 
@@ -32,19 +32,20 @@ Machine type is 16F887
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\judah\AppData\Local\Temp\xcAsftk.\driver_tmp_12.o
+C:\Users\judah\AppData\Local\Temp\xcAs7cc.\driver_tmp_12.o
                 end_init                              E        E        3        8       0
                 reset_vec                             0        0        3        0       0
                 config                             2007     2007        2        0       4
-dist/default/debug\Lab1.X.debug.o
+dist/default/production\Lab1.X.production.o
                 cinit                                11       11        4        8       0
                 intentry                              4        4        A        8       0
                 config                             2007     2007        2        0       4
-                text3                                3B       3B       11        8       0
-                text2                                28       28       13        8       0
-                text1                                15       15       13        8       0
-                maintext                             4C       4C       10        8       0
-                cstackCOMMON                         70       70        3       70       1
+                text4                                3F       3F       11        8       0
+                text3                                2C       2C       13        8       0
+                text2                                50       50        D        8       0
+                text1                                15       15       17        8       0
+                maintext                             5D       5D        C        8       0
+                cstackCOMMON                         70       70        4       70       1
 
 TOTAL           Name                               Link     Load   Length     Space
         CLASS   CODE           
@@ -52,10 +53,11 @@ TOTAL           Name                               Link     Load   Length     Sp
                 cinit                                11       11        4         0
                 intentry                              4        4        A         0
                 reset_vec                             0        0        3         0
-                text3                                3B       3B       11         0
-                text2                                28       28       13         0
-                text1                                15       15       13         0
-                maintext                             4C       4C       10         0
+                text4                                3F       3F       11         0
+                text3                                2C       2C       13         0
+                text2                                50       50        D         0
+                text1                                15       15       17         0
+                maintext                             5D       5D        C         0
 
         CLASS   STRCODE        
 
@@ -66,7 +68,7 @@ TOTAL           Name                               Link     Load   Length     Sp
         CLASS   ENTRY          
 
         CLASS   COMMON         
-                cstackCOMMON                         70       70        3         1
+                cstackCOMMON                         70       70        4         1
 
         CLASS   BANK0          
 
@@ -103,8 +105,8 @@ TOTAL           Name                               Link     Load   Length     Sp
 SEGMENTS        Name                           Load    Length   Top    Selector   Space  Class     Delta
 
                 reset_vec                      000000  000003  000003         0       0  CODE        2
-                intentry                       000004  000058  00005C         8       0  CODE        2
-                cstackCOMMON                   000070  000003  000073        70       1  COMMON      1
+                intentry                       000004  000065  000069         8       0  CODE        2
+                cstackCOMMON                   000070  000004  000074        70       1  COMMON      1
 
 
 UNUSED ADDRESS RANGES
@@ -115,13 +117,13 @@ UNUSED ADDRESS RANGES
         BANK2            0110-016F             60           1
         BANK3            0190-01EF             60           1
         CODE             0003-0003              1           2
-                         005C-1FFF            800
-        COMMON           0073-007D              B           1
+                         0069-1FFF            800
+        COMMON           0074-007D              A           1
         CONST            0003-0003              1           2
-                         005C-1FFF            100
+                         0069-1FFF            100
         EEDATA           2100-21FF            100           2
         ENTRY            0003-0003              1           2
-                         005C-1FFF            100
+                         0069-1FFF            100
         IDLOC            2000-2003              4           2
         RAM              0020-006F             50           1
                          00A0-00EF             50
@@ -132,13 +134,14 @@ UNUSED ADDRESS RANGES
         SFR2             0100-010F             10           1
         SFR3             0180-018F             10           1
         STRCODE          0003-0003              1           2
-                         005C-1FFF           1FA4
+                         0069-1FFF           1F97
         STRING           0003-0003              1           2
-                         005C-1FFF            100
+                         0069-1FFF            100
 
                                   Symbol Table
 
 _ANSEL                   (abs)        0188
+_ANSELH                  (abs)        0189
 _GIE                     (abs)        005F
 _IOCB                    (abs)        0096
 _OSCCONbits              (abs)        008F
@@ -176,8 +179,8 @@ __Hsfr0                  sfr0         0000
 __Hsfr1                  sfr1         0000
 __Hsfr2                  sfr2         0000
 __Hsfr3                  sfr3         0000
-__Hspace_0               (abs)        005C
-__Hspace_1               (abs)        0073
+__Hspace_0               (abs)        0069
+__Hspace_1               (abs)        0074
 __Hspace_2               (abs)        0000
 __Hspace_3               (abs)        0000
 __Hspace_4               (abs)        4010
@@ -217,8 +220,8 @@ __Lspace_4               (abs)        0000
 __Lstack                 stack        0000
 __Lstrings               strings      0000
 __Ltext                  text         0000
-__S0                     (abs)        005C
-__S1                     (abs)        0073
+__S0                     (abs)        0069
+__S1                     (abs)        0074
 __S3                     (abs)        0000
 ___int_sp                stack        0000
 ___latbits               (abs)        0002
@@ -226,20 +229,23 @@ ___sp                    stack        0000
 ___stackhi               (abs)        0000
 ___stacklo               (abs)        0000
 __end_of__initialization cinit        0011
-__end_of_ioc_portB       text3        004C
-__end_of_isr             text2        003B
-__end_of_main            maintext     005C
-__end_of_setup           text1        0028
+__end_of_ioc_portB       text4        0050
+__end_of_iocb_init       text2        005D
+__end_of_isr             text3        003F
+__end_of_main            maintext     0069
+__end_of_setup           text1        002C
 __initialization         cinit        0011
 __pcstackCOMMON          cstackCOMMON 0070
 __pintentry              intentry     0004
-__pmaintext              maintext     004C
+__pmaintext              maintext     005D
 __ptext1                 text1        0015
-__ptext2                 text2        0028
-__ptext3                 text3        003B
-_ioc_portB               text3        003B
-_isr                     text2        0028
-_main                    maintext     004C
+__ptext2                 text2        0050
+__ptext3                 text3        002C
+__ptext4                 text4        003F
+_ioc_portB               text4        003F
+_iocb_init               text2        0050
+_isr                     text3        002C
+_main                    maintext     005D
 _nRBPU                   (abs)        040F
 _setup                   text1        0015
 btemp                    (abs)        007E
@@ -251,6 +257,7 @@ intlevel2                functab      0000
 intlevel3                functab      0000
 intlevel4                functab      0000
 intlevel5                functab      0000
+iocb_init@pinesB         cstackCOMMON 0073
 reset_vec                reset_vec    0000
 saved_w                  (abs)        007E
 start                    init         000E
@@ -261,16 +268,21 @@ wtemp0                   (abs)        007E
 MODULE INFORMATION
 
 Module		Function		Class		Link	Load	Size
-Prelab1.c
-		_main          		CODE           	004C	0000	16
-		_isr           		CODE           	0028	0000	19
-		_setup         		CODE           	0015	0000	19
-		_ioc_portB     		CODE           	003B	0000	17
+Lab1.c
+		_main          		CODE           	005D	0000	12
+		_isr           		CODE           	002C	0000	19
+		_setup         		CODE           	0015	0000	23
+		_ioc_portB     		CODE           	003F	0000	17
 
-Prelab1.c estimated size: 71
+Lab1.c estimated size: 71
 
 shared
 		__initialization		CODE           	0011	0000	1
 
 shared estimated size: 1
+
+iocb_init.c
+		_iocb_init     		CODE           	0050	0000	13
+
+iocb_init.c estimated size: 13
 
