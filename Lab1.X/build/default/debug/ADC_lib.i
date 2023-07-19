@@ -1,4 +1,4 @@
-# 1 "iocb_init.c"
+# 1 "ADC_lib.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,9 +6,9 @@
 # 1 "<built-in>" 2
 # 1 "C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "iocb_init.c" 2
-# 1 "./iocb_init.h" 1
-# 11 "./iocb_init.h"
+# 1 "ADC_lib.c" 2
+# 1 "./ADC_lib.h" 1
+# 10 "./ADC_lib.h"
 # 1 "C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\\pic\\include\\xc.h" 1 3
 # 18 "C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -2626,19 +2626,52 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 29 "C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\\pic\\include\\xc.h" 2 3
-# 11 "./iocb_init.h" 2
+# 10 "./ADC_lib.h" 2
 
 
-void iocb_init(uint8_t);
-# 1 "iocb_init.c" 2
+void adc_init(uint8_t J, uint8_t R, uint8_t clock, uint8_t channel);
+uint16_t adc_read(void);
+# 1 "ADC_lib.c" 2
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\c90\\stdbool.h" 1 3
+# 2 "ADC_lib.c" 2
 
 
 
-void iocb_init(uint8_t pinesB){
-    TRISB |= pinesB;
-    nRBPU = 0;
-    WPUB |= pinesB;
-    RBIE = 1;
-    IOCB |= pinesB;
-    GIE = 1;
+void adc_init(uint8_t J, uint8_t R, uint8_t clock, uint8_t channel){
+# 14 "ADC_lib.c"
+    ADFM = J;
+    VCFG0 = R;
+    VCFG1 = R;
+
+    switch(clock){
+        case 1:
+            ADCON0bits.ADCS = 0b00;
+
+            break;
+        case 4:
+            ADCON0bits.ADCS = 0b01;
+
+            break;
+        case 8:
+            ADCON0bits.ADCS = 0b10;
+
+            break;
+        case 20:
+            ADCON0bits.ADCS = 0b11;
+
+            break;
+    }
+    ADCON0bits.CHS = channel;
+
+
+    ADON = 1;
+}
+
+
+uint16_t adc_read(void){
+    ADCON0bits.GO = 1;
+    while(ADCON0bits.GO);
+    __asm(NOP);
+    return (ADRESH<<8) | ADRESL;
 }

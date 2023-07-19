@@ -1,4 +1,4 @@
-# 1 "iocb_init.c"
+# 1 "Lab1.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,9 +6,8 @@
 # 1 "<built-in>" 2
 # 1 "C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "iocb_init.c" 2
-# 1 "./iocb_init.h" 1
-# 11 "./iocb_init.h"
+# 1 "Lab1.c" 2
+# 15 "Lab1.c"
 # 1 "C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\\pic\\include\\xc.h" 1 3
 # 18 "C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -2626,19 +2625,88 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 29 "C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\\pic\\include\\xc.h" 2 3
-# 11 "./iocb_init.h" 2
+# 15 "Lab1.c" 2
 
 
+# 1 "./iocb_init.h" 1
+# 13 "./iocb_init.h"
 void iocb_init(uint8_t);
-# 1 "iocb_init.c" 2
+# 17 "Lab1.c" 2
+
+# 1 "./ADC_lib.h" 1
+# 12 "./ADC_lib.h"
+void adc_init(uint8_t J, uint8_t R, uint8_t clock, uint8_t channel);
+uint16_t adc_read(void);
+# 18 "Lab1.c" 2
 
 
 
-void iocb_init(uint8_t pinesB){
-    TRISB |= pinesB;
-    nRBPU = 0;
-    WPUB |= pinesB;
-    RBIE = 1;
-    IOCB |= pinesB;
-    GIE = 1;
+
+#pragma config FOSC = INTRC_NOCLKOUT
+#pragma config WDTE = OFF
+#pragma config PWRTE = OFF
+#pragma config MCLRE = OFF
+#pragma config CP = OFF
+#pragma config CPD = OFF
+#pragma config BOREN = OFF
+#pragma config IESO = OFF
+#pragma config FCMEN = OFF
+#pragma config LVP = OFF
+
+
+#pragma config BOR4V = BOR40V
+#pragma config WRT = OFF
+
+
+
+
+
+void ioc_portB(void);
+void setup(void);
+
+
+
+void __attribute__((picinterrupt(("")))) isr(void){
+    if(RBIF){
+        ioc_portB();
+        RBIF = 0;
+    }
+}
+
+
+void ioc_portB(void){
+    if(!RB0) PORTA++;
+    if(!RB1) PORTA--;
+}
+
+
+
+
+
+int main(void) {
+    setup();
+
+    while(1){
+
+        PORTC = adc_read()>>8;
+        _delay((unsigned long)((24)*(8000000/4000000.0)));
+    }
+}
+
+void setup(void){
+
+    ANSEL = 0;
+    ANSELH= 0;
+    TRISA = 0;
+    PORTA = 0;
+    TRISC = 0;
+    PORTC = 0;
+
+
+
+    OSCCONbits.IRCF = 0b111;
+    SCS = 1;
+
+    iocb_init(0x03);
+    adc_init(0, 0, 8, 0b1101);
 }

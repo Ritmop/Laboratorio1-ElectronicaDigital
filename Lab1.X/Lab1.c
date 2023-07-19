@@ -15,6 +15,7 @@
 #include <xc.h>
 #include <PIC16F887.h>
 #include "iocb_init.h"
+#include "ADC_lib.h"
 
 /*---------------------------- CONFIGURATION BITS ----------------------------*/
 // CONFIG1
@@ -53,6 +54,8 @@ void __interrupt() isr(void){
 void ioc_portB(void){
     if(!RB0) PORTA++;
     if(!RB1) PORTA--;
+    if(!RB2) adc_sel_channel(13);
+    if(!RB3) adc_sel_channel(11);
 }
 /*---------------------------------- TABLES ----------------------------------*/
 
@@ -61,26 +64,30 @@ void ioc_portB(void){
 /*----------------------------------- MAIN -----------------------------------*/
 int main(void) {
     setup();
-    PORTA = 0;
+    
     while(1){
         //Loop
+        PORTC = adc_read()>>8; //PORTC = ADRESH
+        __delay_us(24);
+        PORTD = adc_get_channel();
     }
 }
 /*-------------------------------- SUBROUTINES -------------------------------*/
 void setup(void){
    //I/O CONFIG
     ANSEL = 0;  //PORTA as Digital
-    ANSELH = 0;
-    TRISA = 0;  //Counter Output    
+    ANSELH= 0b00101000; //AN11 & AN13 enabled
+    TRISA = 0;  //Counter Output
+    PORTA = 0;  //Clear PORTA
+    TRISC = 0;  //ADC Output
+    PORTC = 0;  //Clear PORTC
+    TRISD = 0;  //Selected channel Output
+    PORTD = 0;  //Clear PORTD        
     
-    iocb_init(0x03); //Initialize 
-
     //OSCILLATOR CONFIG
     OSCCONbits.IRCF = 0b111;  //Internal clock frequency 8MHz
     SCS = 1;
     
-    //INTERRUPT CONFIG
-    GIE  = 1;   //Global Interrupt Enable
-    RBIE = 1;   //PORTB Change Interrupt
-    IOCB = 3;   //RB0 & RB1 Interrupt enable
+    iocb_init(0x0F); //Initialize IOCB
+    adc_init(0, 0, 8, 0b1101); //Initialize ADC. Left, Vdd/Vss, 8MHz, AN13.
 }

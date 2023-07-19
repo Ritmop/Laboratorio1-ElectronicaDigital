@@ -2633,6 +2633,14 @@ extern __bank0 __bit __timeout;
 void iocb_init(uint8_t);
 # 17 "Lab1.c" 2
 
+# 1 "./ADC_lib.h" 1
+# 12 "./ADC_lib.h"
+void adc_init(uint8_t J, uint8_t R, uint8_t clock, uint8_t channel);
+uint16_t adc_read(void);
+void adc_sel_channel(uint8_t channel);
+uint8_t adc_get_channel(void);
+# 18 "Lab1.c" 2
+
 
 
 
@@ -2671,6 +2679,8 @@ void __attribute__((picinterrupt(("")))) isr(void){
 void ioc_portB(void){
     if(!RB0) PORTA++;
     if(!RB1) PORTA--;
+    if(!RB2) adc_sel_channel(13);
+    if(!RB3) adc_sel_channel(11);
 }
 
 
@@ -2679,26 +2689,30 @@ void ioc_portB(void){
 
 int main(void) {
     setup();
-    PORTA = 0;
+
     while(1){
 
+        PORTC = adc_read()>>8;
+        _delay((unsigned long)((24)*(8000000/4000000.0)));
+        PORTD = adc_get_channel();
     }
 }
 
 void setup(void){
 
     ANSEL = 0;
-    ANSELH = 0;
+    ANSELH= 0b00101000;
     TRISA = 0;
-
-    iocb_init(0x03);
+    PORTA = 0;
+    TRISC = 0;
+    PORTC = 0;
+    TRISD = 0;
+    PORTD = 0;
 
 
     OSCCONbits.IRCF = 0b111;
     SCS = 1;
 
-
-    GIE = 1;
-    RBIE = 1;
-    IOCB = 3;
+    iocb_init(0x0F);
+    adc_init(0, 0, 8, 0b1101);
 }
