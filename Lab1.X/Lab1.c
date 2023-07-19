@@ -16,6 +16,7 @@
 #include <PIC16F887.h>
 #include "iocb_init.h"
 #include "ADC_lib.h"
+#include "disp_7seg.h"
 
 /*---------------------------- CONFIGURATION BITS ----------------------------*/
 // CONFIG1
@@ -36,18 +37,35 @@
 
 /*----------------------- GLOBAL VARIABLES & CONSTANTS -----------------------*/
 #define _XTAL_FREQ 8000000  //Constante para delay
+#define _TMR0n 100   //TMR0 load value
+uint8_t adc_val;    //ADC read value
+uint16_t nibbles;   //High & Low nibbles in a single reg
+uint8_t high_nib;   //High nibble
+uint8_t low_nib;    //Low nibble
+uint8_t disp1;      //7 seg display 1 value
+uint8_t disp2;      //7 seg display 2 value
+uint8_t dispSel;    //Display select
+        
         
 /*-------------------------------- PROTOTYPES --------------------------------*/
 void ioc_portB(void);
 void setup(void);
+void multiplex(uint8_t selector);
+void alarm(uint8_t ref,uint8_t var);
 /*------------------------------- RESET VECTOR -------------------------------*/
 
 /*----------------------------- INTERRUPT VECTOR -----------------------------*/
 void __interrupt() isr(void){
+    if(T0IF){
+        dispSel++;  //Change selected display
+        //Reset timer0
+        TMR0 = _TMR0n;
+        T0IF = 0;
+    }
     if(RBIF){
         ioc_portB();
         RBIF = 0;
-    }
+    }    
 }
 
 /*--------------------------- INTERRUPT SUBROUTINES --------------------------*/
@@ -64,12 +82,18 @@ void ioc_portB(void){
 /*----------------------------------- MAIN -----------------------------------*/
 int main(void) {
     setup();
-    
     while(1){
         //Loop
-        PORTC = adc_read()>>8; //PORTC = ADRESH
-        __delay_us(24);
-        PORTD = adc_get_channel();
+        //Display pot value
+        adc_val = adc_read()>>8;            //Read pot value
+        nibbles = split_nibbles(adc_val);   //Separate pot value into nibbles
+        low_nib = nibbles;                  //Capture low nibble
+        high_nib = nibbles>>8;              //Capture high nibble
+        disp2 = hex_to_7seg(low_nib);       //Convert low nibble into disp2 val
+        disp1 = hex_to_7seg(high_nib);      //Convert high nibble into disp1 val  
+        multiplex(dispSel);                 //Switch selected display & output
+        //Check alarm
+        alarm(PORTA,adc_val); //Check if pot val > PORTA counter
     }
 }
 /*-------------------------------- SUBROUTINES -------------------------------*/
@@ -78,11 +102,13 @@ void setup(void){
     ANSEL = 0;  //PORTA as Digital
     ANSELH= 0b00101000; //AN11 & AN13 enabled
     TRISA = 0;  //Counter Output
-    PORTA = 0;  //Clear PORTA
+    PORTA = 0x7F;  //Start counter at 0x7F
     TRISC = 0;  //ADC Output
     PORTC = 0;  //Clear PORTC
     TRISD = 0;  //Selected channel Output
-    PORTD = 0;  //Clear PORTD        
+    PORTD = 0;  //Clear PORTD 
+    TRISE = 0;  //Selected channel Output
+    PORTE = 0;  //Clear PORTD 
     
     //OSCILLATOR CONFIG
     OSCCONbits.IRCF = 0b111;  //Internal clock frequency 8MHz
@@ -90,4 +116,30 @@ void setup(void){
     
     iocb_init(0x0F); //Initialize IOCB
     adc_init(0, 0, 8, 0b1101); //Initialize ADC. Left, Vdd/Vss, 8MHz, AN13.
+    
+    //TMR0 config
+    GIE = 1;    //Enable global interrupts
+    T0IE = 1;   //Enable TMR0 interrupt
+    OPTION_REGbits.PS = 0b000;  //Prescaler = 2
+    T0CS = 0;   //Use internal cycle clock
+    TMR0 = _TMR0n;
+    T0IF = 0;   //Clear flag
+}
+
+void multiplex(uint8_t selector){
+    if(selector & 0x01 == 1){        //If disp 1 is enabled
+            RE0 = 0;    //Disable disp 1
+            PORTD = disp2;
+            RE1 = 1;    //Enable disp 2            
+        }
+        else{           //If disp 1 is disabled
+            RE1 = 0;    //Disable disp 2
+            PORTD = disp1;
+            RE0 = 1;    //Enable disp 1           
+        }        
+}
+
+void alarm(uint8_t ref,uint8_t var){
+    if(var >= ref) RE2 = 1;
+    else RE2 = 0;
 }

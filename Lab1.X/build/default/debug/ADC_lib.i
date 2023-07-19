@@ -2631,15 +2631,14 @@ extern __bank0 __bit __timeout;
 
 void adc_init(uint8_t J, uint8_t R, uint8_t clock, uint8_t channel);
 uint16_t adc_read(void);
+void adc_sel_channel(uint8_t channel);
+uint8_t adc_get_channel(void);
 # 1 "ADC_lib.c" 2
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\c90\\stdbool.h" 1 3
-# 2 "ADC_lib.c" 2
 
 
 
 void adc_init(uint8_t J, uint8_t R, uint8_t clock, uint8_t channel){
-# 14 "ADC_lib.c"
+# 13 "ADC_lib.c"
     ADFM = J;
     VCFG0 = R;
     VCFG1 = R;
@@ -2672,6 +2671,15 @@ void adc_init(uint8_t J, uint8_t R, uint8_t clock, uint8_t channel){
 uint16_t adc_read(void){
     ADCON0bits.GO = 1;
     while(ADCON0bits.GO);
-    __asm(NOP);
     return (ADRESH<<8) | ADRESL;
+}
+
+
+void adc_sel_channel(uint8_t channel){
+    ADCON0bits.CHS = channel;
+}
+
+
+uint8_t adc_get_channel(void){
+    return ADCON0bits.CHS;
 }

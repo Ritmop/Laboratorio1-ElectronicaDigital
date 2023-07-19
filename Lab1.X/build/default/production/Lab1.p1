@@ -1,10 +1,14 @@
 Version 4.0 HI-TECH Software Intermediate Code
 [t ~ __interrupt . k ]
 [t T1 __interrupt ]
-"4134 C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\PIC16F887.h
+"4326 C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\PIC16F887.h
+[v _T0IF `Vb ~T0 @X0 0 e@90 ]
+"59
+[v _TMR0 `Vuc ~T0 @X0 0 e@1 ]
+"4134
 [v _RBIF `Vb ~T0 @X0 0 e@88 ]
-"41 Lab1.c
-[; ;Lab1.c: 41:     ANSEL = 0;
+"51 Lab1.c
+[; ;Lab1.c: 51:         nibbles = split_nibbles(adc_val);
 [v _ioc_portB `(v ~T0 @X0 0 ef ]
 "4107 C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\PIC16F887.h
 [v _RB0 `Vb ~T0 @X0 0 e@48 ]
@@ -20,23 +24,24 @@ Version 4.0 HI-TECH Software Intermediate Code
 "4116 C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\PIC16F887.h
 [v _RB3 `Vb ~T0 @X0 0 e@51 ]
 [p mainexit ]
-"42 Lab1.c
-[; ;Lab1.c: 42:     ANSELH= 0b00101000;
+"52 Lab1.c
+[; ;Lab1.c: 52:         low_nib = nibbles;
 [v _setup `(v ~T0 @X0 0 ef ]
-"290 C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\PIC16F887.h
-[v _PORTC `Vuc ~T0 @X0 0 e@7 ]
 "13 ./ADC_lib.h
 [; ;./ADC_lib.h: 13: uint16_t adc_read(void);
 [v _adc_read `(ui ~T0 @X0 0 ef ]
-[v F36 `(v ~T0 @X0 1 tf1`ul ]
-"12 C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\builtins.h
-[v __delay `JF36 ~T0 @X0 0 e ]
-[p i __delay ]
-"352 C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\PIC16F887.h
-[v _PORTD `Vuc ~T0 @X0 0 e@8 ]
-"15 ./ADC_lib.h
-[; ;./ADC_lib.h: 15: uint8_t adc_get_channel(void);
-[v _adc_get_channel `(uc ~T0 @X0 0 ef ]
+"14 ./disp_7seg.h
+[; ;./disp_7seg.h: 14: uint16_t split_nibbles(uint8_t hex);
+[v _split_nibbles `(ui ~T0 @X0 0 ef1`uc ]
+"13
+[; ;./disp_7seg.h: 13: uint8_t hex_to_7seg(uint8_t hex);
+[v _hex_to_7seg `(uc ~T0 @X0 0 ef1`uc ]
+"53 Lab1.c
+[; ;Lab1.c: 53:         high_nib = nibbles>>8;
+[v _multiplex `(v ~T0 @X0 0 ef1`uc ]
+"54
+[; ;Lab1.c: 54:         disp2 = hex_to_7seg(low_nib);
+[v _alarm `(v ~T0 @X0 0 ef2`uc`uc ]
 "3387 C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\PIC16F887.h
 [v _ANSEL `Vuc ~T0 @X0 0 e@392 ]
 "3449
@@ -45,8 +50,16 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _TRISA `Vuc ~T0 @X0 0 e@133 ]
 "1540
 [v _TRISC `Vuc ~T0 @X0 0 e@135 ]
+"290
+[v _PORTC `Vuc ~T0 @X0 0 e@7 ]
 "1602
 [v _TRISD `Vuc ~T0 @X0 0 e@136 ]
+"352
+[v _PORTD `Vuc ~T0 @X0 0 e@8 ]
+"1664
+[v _TRISE `Vuc ~T0 @X0 0 e@137 ]
+"414
+[v _PORTE `Vuc ~T0 @X0 0 e@9 ]
 "1868
 [s S70 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 ]
 [n S70 . SCS LTS HTS OSTS IRCF ]
@@ -66,6 +79,29 @@ Version 4.0 HI-TECH Software Intermediate Code
 "12 ./ADC_lib.h
 [; ;./ADC_lib.h: 12: void adc_init(uint8_t J, uint8_t R, uint8_t clock, uint8_t channel);
 [v _adc_init `(v ~T0 @X0 0 ef4`uc`uc`uc`uc ]
+"3900 C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\PIC16F887.h
+[v _GIE `Vb ~T0 @X0 0 e@95 ]
+"4323
+[v _T0IE `Vb ~T0 @X0 0 e@93 ]
+"1352
+[s S50 :3 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S50 . PS PSA T0SE T0CS INTEDG nRBPU ]
+"1360
+[s S51 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S51 . PS0 PS1 PS2 ]
+"1351
+[u S49 `S50 1 `S51 1 ]
+[n S49 . . . ]
+"1366
+[v _OPTION_REGbits `VS49 ~T0 @X0 0 e@129 ]
+"4320
+[v _T0CS `Vb ~T0 @X0 0 e@1037 ]
+"4209
+[v _RE0 `Vb ~T0 @X0 0 e@72 ]
+"4212
+[v _RE1 `Vb ~T0 @X0 0 e@73 ]
+"4215
+[v _RE2 `Vb ~T0 @X0 0 e@74 ]
 "54 C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\PIC16F887.h
 [; <" INDF equ 00h ;# ">
 "61
@@ -222,148 +258,286 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; <" EECON1 equ 018Ch ;# ">
 "3546
 [; <" EECON2 equ 018Dh ;# ">
-"22 Lab1.c
-[; ;Lab1.c: 22: }
-[p x FOSC  =  INTRC_NOCLKOUT ]
-"23
+"23 Lab1.c
 [; ;Lab1.c: 23: 
-[p x WDTE  =  OFF        ]
+[p x FOSC  =  INTRC_NOCLKOUT ]
 "24
-[; ;Lab1.c: 24: 
-[p x PWRTE  =  OFF       ]
+[; ;Lab1.c: 24:         TMR0 = 100;
+[p x WDTE  =  OFF        ]
 "25
-[; ;Lab1.c: 25: 
-[p x MCLRE  =  OFF       ]
+[; ;Lab1.c: 25:         T0IF = 0;
+[p x PWRTE  =  OFF       ]
 "26
-[; ;Lab1.c: 26: 
-[p x CP  =  OFF          ]
+[; ;Lab1.c: 26:     }
+[p x MCLRE  =  OFF       ]
 "27
-[; ;Lab1.c: 27: 
-[p x CPD  =  OFF         ]
+[; ;Lab1.c: 27:     if(RBIF){
+[p x CP  =  OFF          ]
 "28
-[; ;Lab1.c: 28: int main(void) {
-[p x BOREN  =  OFF       ]
+[; ;Lab1.c: 28:         ioc_portB();
+[p x CPD  =  OFF         ]
 "29
-[; ;Lab1.c: 29:     setup();
-[p x IESO  =  OFF        ]
+[; ;Lab1.c: 29:         RBIF = 0;
+[p x BOREN  =  OFF       ]
 "30
-[; ;Lab1.c: 30: 
-[p x FCMEN  =  OFF       ]
+[; ;Lab1.c: 30:     }
+[p x IESO  =  OFF        ]
 "31
-[; ;Lab1.c: 31:     while(1){
+[; ;Lab1.c: 31: }
+[p x FCMEN  =  OFF       ]
+"32
+[; ;Lab1.c: 32: 
 [p x LVP  =  OFF         ]
-"34
-[; ;Lab1.c: 34:         _delay((unsigned long)((24)*(8000000/4000000.0)));
-[p x BOR4V  =  BOR40V    ]
 "35
-[; ;Lab1.c: 35:         PORTD = adc_get_channel();
+[; ;Lab1.c: 35:     if(!RB0) PORTA++;
+[p x BOR4V  =  BOR40V    ]
+"36
+[; ;Lab1.c: 36:     if(!RB1) PORTA--;
 [p x WRT  =  OFF         ]
-[v $root$_isr `(v ~T0 @X0 0 e ]
+"41
+[; ;Lab1.c: 41: 
+[v _adc_val `uc ~T0 @X0 1 e ]
+"42
+[; ;Lab1.c: 42: 
+[v _nibbles `ui ~T0 @X0 1 e ]
+"43
+[; ;Lab1.c: 43: 
+[v _high_nib `uc ~T0 @X0 1 e ]
+"44
+[; ;Lab1.c: 44: 
+[v _low_nib `uc ~T0 @X0 1 e ]
+"45
+[; ;Lab1.c: 45: int main(void) {
+[v _disp1 `uc ~T0 @X0 1 e ]
 "46
-[; ;Lab1.c: 46:     PORTC = 0;
+[; ;Lab1.c: 46:     setup();
+[v _disp2 `uc ~T0 @X0 1 e ]
+"47
+[; ;Lab1.c: 47:     while(1){
+[v _dispSel `uc ~T0 @X0 1 e ]
+[v $root$_isr `(v ~T0 @X0 0 e ]
+"58
+[; ;Lab1.c: 58:         alarm(PORTA,adc_val);
 [v _isr `(v ~T1 @X0 1 ef ]
 {
 [e :U _isr ]
 [f ]
-"47
-[; ;Lab1.c: 47:     TRISD = 0;
-[e $ ! _RBIF 139  ]
+"59
+[; ;Lab1.c: 59:     }
+[e $ ! _T0IF 139  ]
 {
-"48
-[; ;Lab1.c: 48:     PORTD = 0;
-[e ( _ioc_portB ..  ]
-"49
-[; ;Lab1.c: 49: 
-[e = _RBIF -> -> 0 `i `b ]
-"50
-[; ;Lab1.c: 50: 
+"60
+[; ;Lab1.c: 60: }
+[e ++ _dispSel -> -> 1 `i `uc ]
+"62
+[; ;Lab1.c: 62: void setup(void){
+[e = _TMR0 -> -> 100 `i `uc ]
+"63
+[; ;Lab1.c: 63: 
+[e = _T0IF -> -> 0 `i `b ]
+"64
+[; ;Lab1.c: 64:     ANSEL = 0;
 }
 [e :U 139 ]
-"51
-[; ;Lab1.c: 51:     OSCCONbits.IRCF = 0b111;
+"65
+[; ;Lab1.c: 65:     ANSELH= 0b00101000;
+[e $ ! _RBIF 140  ]
+{
+"66
+[; ;Lab1.c: 66:     TRISA = 0;
+[e ( _ioc_portB ..  ]
+"67
+[; ;Lab1.c: 67:     PORTA = 0x7F;
+[e = _RBIF -> -> 0 `i `b ]
+"68
+[; ;Lab1.c: 68:     TRISC = 0;
+}
+[e :U 140 ]
+"69
+[; ;Lab1.c: 69:     PORTC = 0;
 [e :UE 138 ]
 }
-"54
-[; ;Lab1.c: 54:     iocb_init(0x0F);
+"72
+[; ;Lab1.c: 72:     TRISE = 0;
 [v _ioc_portB `(v ~T0 @X0 1 ef ]
 {
 [e :U _ioc_portB ]
 [f ]
-"55
-[; ;Lab1.c: 55:     adc_init(0, 0, 8, 0b1101);
-[e $ ! ! _RB0 141  ]
+"73
+[; ;Lab1.c: 73:     PORTE = 0;
+[e $ ! ! _RB0 142  ]
 [e ++ _PORTA -> -> 1 `i `Vuc ]
-[e :U 141 ]
-"56
-[; ;Lab1.c: 56: }
-[e $ ! ! _RB1 142  ]
-[e -- _PORTA -> -> 1 `i `Vuc ]
 [e :U 142 ]
-"57
-[e $ ! ! _RB2 143  ]
-[e ( _adc_sel_channel (1 -> -> 13 `i `uc ]
+"74
+[; ;Lab1.c: 74: 
+[e $ ! ! _RB1 143  ]
+[e -- _PORTA -> -> 1 `i `Vuc ]
 [e :U 143 ]
-"58
-[e $ ! ! _RB3 144  ]
-[e ( _adc_sel_channel (1 -> -> 11 `i `uc ]
+"75
+[; ;Lab1.c: 75: 
+[e $ ! ! _RB2 144  ]
+[e ( _adc_sel_channel (1 -> -> 13 `i `uc ]
 [e :U 144 ]
-"59
-[e :UE 140 ]
+"76
+[; ;Lab1.c: 76:     OSCCONbits.IRCF = 0b111;
+[e $ ! ! _RB3 145  ]
+[e ( _adc_sel_channel (1 -> -> 11 `i `uc ]
+[e :U 145 ]
+"77
+[; ;Lab1.c: 77:     SCS = 1;
+[e :UE 141 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"65
+"83
+[; ;Lab1.c: 83:     GIE = 1;
 [v _main `(i ~T0 @X0 1 ef ]
 {
 [e :U _main ]
 [f ]
-"66
+"84
+[; ;Lab1.c: 84:     T0IE = 1;
 [e ( _setup ..  ]
-"68
-[e :U 147 ]
-{
-"70
-[e = _PORTC -> >> ( _adc_read ..  -> 8 `i `uc ]
-"71
-[e ( __delay (1 -> * -> -> 24 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
-"72
-[e = _PORTD ( _adc_get_channel ..  ]
-"73
-}
-[e :U 146 ]
-[e $U 147  ]
+"85
+[; ;Lab1.c: 85:     OPTION_REGbits.PS = 0b000;
 [e :U 148 ]
-"74
-[e :UE 145 ]
+{
+"88
+[; ;Lab1.c: 88:     T0IF = 0;
+[e = _adc_val -> >> ( _adc_read ..  -> 8 `i `uc ]
+"89
+[; ;Lab1.c: 89: }
+[e = _nibbles ( _split_nibbles (1 _adc_val ]
+"90
+[; ;Lab1.c: 90: 
+[e = _low_nib -> _nibbles `uc ]
+"91
+[; ;Lab1.c: 91: void multiplex(uint8_t selector){
+[e = _high_nib -> >> _nibbles -> 8 `i `uc ]
+"92
+[; ;Lab1.c: 92:     if(selector & 0x01 == 1){
+[e = _disp2 ( _hex_to_7seg (1 _low_nib ]
+"93
+[; ;Lab1.c: 93:             RE0 = 0;
+[e = _disp1 ( _hex_to_7seg (1 _high_nib ]
+"94
+[; ;Lab1.c: 94:             PORTD = disp2;
+[e ( _multiplex (1 _dispSel ]
+"96
+[; ;Lab1.c: 96:         }
+[e ( _alarm (2 , _PORTA _adc_val ]
+"97
+[; ;Lab1.c: 97:         else{
 }
-"76
+[e :U 147 ]
+[e $U 148  ]
+[e :U 149 ]
+"98
+[; ;Lab1.c: 98:             RE1 = 0;
+[e :UE 146 ]
+}
+"100
+[; ;Lab1.c: 100:             RE0 = 1;
 [v _setup `(v ~T0 @X0 1 ef ]
 {
 [e :U _setup ]
 [f ]
-"78
+"102
+[; ;Lab1.c: 102: }
 [e = _ANSEL -> -> 0 `i `uc ]
-"79
+"103
+[; ;Lab1.c: 103: 
 [e = _ANSELH -> -> 40 `i `uc ]
-"80
+"104
+[; ;Lab1.c: 104: void alarm(uint8_t ref,uint8_t var){
 [e = _TRISA -> -> 0 `i `uc ]
-"81
-[e = _PORTA -> -> 0 `i `uc ]
-"82
+"105
+[; ;Lab1.c: 105:     if(var >= ref) RE2 = 1;
+[e = _PORTA -> -> 127 `i `uc ]
+"106
+[; ;Lab1.c: 106:     else RE2 = 0;
 [e = _TRISC -> -> 0 `i `uc ]
-"83
+"107
+[; ;Lab1.c: 107: }
 [e = _PORTC -> -> 0 `i `uc ]
-"84
+"108
 [e = _TRISD -> -> 0 `i `uc ]
-"85
+"109
 [e = _PORTD -> -> 0 `i `uc ]
-"88
+"110
+[e = _TRISE -> -> 0 `i `uc ]
+"111
+[e = _PORTE -> -> 0 `i `uc ]
+"114
 [e = . . _OSCCONbits 0 4 -> -> 7 `i `uc ]
-"89
+"115
 [e = _SCS -> -> 1 `i `b ]
-"91
+"117
 [e ( _iocb_init (1 -> -> 15 `i `uc ]
-"92
+"118
 [e ( _adc_init (4 , , , -> -> 0 `i `uc -> -> 0 `i `uc -> -> 8 `i `uc -> -> 13 `i `uc ]
-"93
-[e :UE 149 ]
+"121
+[e = _GIE -> -> 1 `i `b ]
+"122
+[e = _T0IE -> -> 1 `i `b ]
+"123
+[e = . . _OPTION_REGbits 0 0 -> -> 0 `i `uc ]
+"124
+[e = _T0CS -> -> 0 `i `b ]
+"125
+[e = _TMR0 -> -> 100 `i `uc ]
+"126
+[e = _T0IF -> -> 0 `i `b ]
+"127
+[e :UE 150 ]
+}
+"129
+[v _multiplex `(v ~T0 @X0 1 ef1`uc ]
+{
+[e :U _multiplex ]
+[v _selector `uc ~T0 @X0 1 r1 ]
+[f ]
+"130
+[e $ ! != & -> _selector `i -> == -> 1 `i -> 1 `i `i -> 0 `i 152  ]
+{
+"131
+[e = _RE0 -> -> 0 `i `b ]
+"132
+[e = _PORTD _disp2 ]
+"133
+[e = _RE1 -> -> 1 `i `b ]
+"134
+}
+[e $U 153  ]
+"135
+[e :U 152 ]
+{
+"136
+[e = _RE1 -> -> 0 `i `b ]
+"137
+[e = _PORTD _disp1 ]
+"138
+[e = _RE0 -> -> 1 `i `b ]
+"139
+}
+[e :U 153 ]
+"140
+[e :UE 151 ]
+}
+"142
+[v _alarm `(v ~T0 @X0 1 ef2`uc`uc ]
+{
+[e :U _alarm ]
+[v _ref `uc ~T0 @X0 1 r1 ]
+[v _var `uc ~T0 @X0 1 r2 ]
+[f ]
+"143
+[e $ ! >= -> _var `i -> _ref `i 155  ]
+[e = _RE2 -> -> 1 `i `b ]
+[e $U 156  ]
+"144
+[e :U 155 ]
+[e = _RE2 -> -> 0 `i `b ]
+[e :U 156 ]
+"145
+[e :UE 154 ]
 }

@@ -2641,6 +2641,12 @@ void adc_sel_channel(uint8_t channel);
 uint8_t adc_get_channel(void);
 # 18 "Lab1.c" 2
 
+# 1 "./disp_7seg.h" 1
+# 13 "./disp_7seg.h"
+uint8_t hex_to_7seg(uint8_t hex);
+uint16_t split_nibbles(uint8_t hex);
+# 19 "Lab1.c" 2
+
 
 
 
@@ -2662,13 +2668,30 @@ uint8_t adc_get_channel(void);
 
 
 
+uint8_t adc_val;
+uint16_t nibbles;
+uint8_t high_nib;
+uint8_t low_nib;
+uint8_t disp1;
+uint8_t disp2;
+uint8_t dispSel;
+
+
 
 void ioc_portB(void);
 void setup(void);
+void multiplex(uint8_t selector);
+void alarm(uint8_t ref,uint8_t var);
 
 
 
 void __attribute__((picinterrupt(("")))) isr(void){
+    if(T0IF){
+        dispSel++;
+
+        TMR0 = 100;
+        T0IF = 0;
+    }
     if(RBIF){
         ioc_portB();
         RBIF = 0;
@@ -2689,12 +2712,18 @@ void ioc_portB(void){
 
 int main(void) {
     setup();
-
     while(1){
 
-        PORTC = adc_read()>>8;
-        _delay((unsigned long)((24)*(8000000/4000000.0)));
-        PORTD = adc_get_channel();
+
+        adc_val = adc_read()>>8;
+        nibbles = split_nibbles(adc_val);
+        low_nib = nibbles;
+        high_nib = nibbles>>8;
+        disp2 = hex_to_7seg(low_nib);
+        disp1 = hex_to_7seg(high_nib);
+        multiplex(dispSel);
+
+        alarm(PORTA,adc_val);
     }
 }
 
@@ -2703,11 +2732,13 @@ void setup(void){
     ANSEL = 0;
     ANSELH= 0b00101000;
     TRISA = 0;
-    PORTA = 0;
+    PORTA = 0x7F;
     TRISC = 0;
     PORTC = 0;
     TRISD = 0;
     PORTD = 0;
+    TRISE = 0;
+    PORTE = 0;
 
 
     OSCCONbits.IRCF = 0b111;
@@ -2715,4 +2746,30 @@ void setup(void){
 
     iocb_init(0x0F);
     adc_init(0, 0, 8, 0b1101);
+
+
+    GIE = 1;
+    T0IE = 1;
+    OPTION_REGbits.PS = 0b000;
+    T0CS = 0;
+    TMR0 = 100;
+    T0IF = 0;
+}
+
+void multiplex(uint8_t selector){
+    if(selector & 0x01 == 1){
+            RE0 = 0;
+            PORTD = disp2;
+            RE1 = 1;
+        }
+        else{
+            RE1 = 0;
+            PORTD = disp1;
+            RE0 = 1;
+        }
+}
+
+void alarm(uint8_t ref,uint8_t var){
+    if(var >= ref) RE2 = 1;
+    else RE2 = 0;
 }

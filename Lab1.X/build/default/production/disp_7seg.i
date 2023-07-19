@@ -1,4 +1,4 @@
-# 1 "Lab1.c"
+# 1 "disp_7seg.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,8 +6,9 @@
 # 1 "<built-in>" 2
 # 1 "C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "Lab1.c" 2
-# 15 "Lab1.c"
+# 1 "disp_7seg.c" 2
+# 1 "./disp_7seg.h" 1
+# 11 "./disp_7seg.h"
 # 1 "C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\\pic\\include\\xc.h" 1 3
 # 18 "C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -2625,135 +2626,55 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 29 "C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\\pic\\include\\xc.h" 2 3
-# 15 "Lab1.c" 2
+# 11 "./disp_7seg.h" 2
 
 
-# 1 "./iocb_init.h" 1
-# 13 "./iocb_init.h"
-void iocb_init(uint8_t);
-# 17 "Lab1.c" 2
-
-# 1 "./ADC_lib.h" 1
-# 12 "./ADC_lib.h"
-void adc_init(uint8_t J, uint8_t R, uint8_t clock, uint8_t channel);
-uint16_t adc_read(void);
-void adc_sel_channel(uint8_t channel);
-uint8_t adc_get_channel(void);
-# 18 "Lab1.c" 2
-
-# 1 "./disp_7seg.h" 1
-# 13 "./disp_7seg.h"
 uint8_t hex_to_7seg(uint8_t hex);
 uint16_t split_nibbles(uint8_t hex);
-# 19 "Lab1.c" 2
-
-
-
-
-#pragma config FOSC = INTRC_NOCLKOUT
-#pragma config WDTE = OFF
-#pragma config PWRTE = OFF
-#pragma config MCLRE = OFF
-#pragma config CP = OFF
-#pragma config CPD = OFF
-#pragma config BOREN = OFF
-#pragma config IESO = OFF
-#pragma config FCMEN = OFF
-#pragma config LVP = OFF
-
-
-#pragma config BOR4V = BOR40V
-#pragma config WRT = OFF
-
-
-
-uint8_t adc_val;
-uint16_t nibbles;
-uint8_t high_nib;
-uint8_t low_nib;
-uint8_t disp1;
-uint8_t disp2;
-
-
-
-void ioc_portB(void);
-void setup(void);
-
-
-
-void __attribute__((picinterrupt(("")))) isr(void){
-    if(RBIF){
-        ioc_portB();
-        RBIF = 0;
-    }
-    if(T0IF){
-        if(RE0){
-            RE0 = 0;
-            RE1 = 1;
-        }
-        else{
-            RE0 = 1;
-            RE1 = 0;
-        }
-
-        TMR0 = 246;
-        T0IF = 0;
+# 1 "disp_7seg.c" 2
+# 21 "disp_7seg.c"
+uint8_t hex_to_7seg(uint8_t hex){
+    switch(hex){
+        case 0x00:
+            return 0b00111111;
+        case 0x01:
+            return 0b00000110;
+        case 0x02:
+            return 0b01011011;
+        case 0x03:
+            return 0b01001111;
+        case 0x04:
+            return 0b01100110;
+        case 0x05:
+            return 0b01101101;
+        case 0x06:
+            return 0b01111101;
+        case 0x07:
+            return 0b00000111;
+        case 0x08:
+            return 0b01111111;
+        case 0x09:
+            return 0b01101111;
+        case 0x0A:
+            return 0b01110111;
+        case 0x0B:
+            return 0b01111100;
+        case 0x0C:
+            return 0b00111001;
+        case 0x0D:
+            return 0b01011110;
+        case 0x0E:
+            return 0b01111001;
+        case 0x0F:
+            return 0b01110001;
     }
 }
 
 
-void ioc_portB(void){
-    if(!RB0) PORTA++;
-    if(!RB1) PORTA--;
-    if(!RB2) adc_sel_channel(13);
-    if(!RB3) adc_sel_channel(11);
-}
-
-
-
-
-
-int main(void) {
-    setup();
-    RE0 = 1;
-    while(1){
-
-
-        adc_val = adc_read()>>8;
-        nibbles = split_nibbles(PORTA);
-        low_nib = nibbles;
-        high_nib = nibbles>>8;
-        disp2 = hex_to_7seg(low_nib);
-        disp1 = hex_to_7seg(high_nib);
-        PORTD = RE0?disp1:disp2;
-    }
-}
-
-void setup(void){
-
-    ANSEL = 0;
-    ANSELH= 0b00101000;
-    TRISA = 0;
-    PORTA = 0;
-    TRISC = 0;
-    PORTC = 0;
-    TRISD = 0;
-    PORTD = 0;
-    TRISE = 0;
-    PORTE = 0;
-
-
-    OSCCONbits.IRCF = 0b111;
-    SCS = 1;
-
-    iocb_init(0x0F);
-    adc_init(0, 0, 8, 0b1101);
-
-
-    GIE = 1;
-    T0IE = 1;
-    OPTION_REGbits.PS = 0b000;
-    T0CS = 0;
-    TMR0 = 246;
-    T0IF = 0;
+uint16_t split_nibbles(uint8_t hex){
+    uint8_t high_nib;
+    uint8_t low_nib;
+    low_nib = hex & 0x0F;
+    high_nib = hex>>4 & 0x0F;
+    return high_nib<<8 | low_nib;
 }

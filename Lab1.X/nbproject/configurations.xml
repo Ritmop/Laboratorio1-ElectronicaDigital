@@ -17,6 +17,8 @@
       <itemPath>iocb_init.c</itemPath>
       <itemPath>ADC_lib.h</itemPath>
       <itemPath>ADC_lib.c</itemPath>
+      <itemPath>disp_7seg.h</itemPath>
+      <itemPath>disp_7seg.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
