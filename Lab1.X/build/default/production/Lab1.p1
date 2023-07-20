@@ -12,8 +12,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _ioc_portB `(v ~T0 @X0 0 ef ]
 "4107 C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\PIC16F887.h
 [v _RB0 `Vb ~T0 @X0 0 e@48 ]
-"166
-[v _PORTA `Vuc ~T0 @X0 0 e@5 ]
+"290
+[v _PORTC `Vuc ~T0 @X0 0 e@7 ]
 "4110
 [v _RB1 `Vb ~T0 @X0 0 e@49 ]
 "4113
@@ -48,10 +48,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _ANSELH `Vuc ~T0 @X0 0 e@393 ]
 "1416
 [v _TRISA `Vuc ~T0 @X0 0 e@133 ]
+"166
+[v _PORTA `Vuc ~T0 @X0 0 e@5 ]
 "1540
 [v _TRISC `Vuc ~T0 @X0 0 e@135 ]
-"290
-[v _PORTC `Vuc ~T0 @X0 0 e@7 ]
 "1602
 [v _TRISD `Vuc ~T0 @X0 0 e@136 ]
 "352
@@ -262,7 +262,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;Lab1.c: 23: 
 [p x FOSC  =  INTRC_NOCLKOUT ]
 "24
-[; ;Lab1.c: 24:         TMR0 = 100;
+[; ;Lab1.c: 24:         TMR0 = 50;
 [p x WDTE  =  OFF        ]
 "25
 [; ;Lab1.c: 25:         T0IF = 0;
@@ -289,10 +289,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;Lab1.c: 32: 
 [p x LVP  =  OFF         ]
 "35
-[; ;Lab1.c: 35:     if(!RB0) PORTA++;
+[; ;Lab1.c: 35:     if(!RB0) PORTC++;
 [p x BOR4V  =  BOR40V    ]
 "36
-[; ;Lab1.c: 36:     if(!RB1) PORTA--;
+[; ;Lab1.c: 36:     if(!RB1) PORTC--;
 [p x WRT  =  OFF         ]
 "41
 [; ;Lab1.c: 41: 
@@ -317,7 +317,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _dispSel `uc ~T0 @X0 1 e ]
 [v $root$_isr `(v ~T0 @X0 0 e ]
 "58
-[; ;Lab1.c: 58:         alarm(PORTA,adc_val);
+[; ;Lab1.c: 58:         alarm(PORTC,adc_val);
 [v _isr `(v ~T1 @X0 1 ef ]
 {
 [e :U _isr ]
@@ -331,7 +331,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ++ _dispSel -> -> 1 `i `uc ]
 "62
 [; ;Lab1.c: 62: void setup(void){
-[e = _TMR0 -> -> 100 `i `uc ]
+[e = _TMR0 -> -> 50 `i `uc ]
 "63
 [; ;Lab1.c: 63: 
 [e = _T0IF -> -> 0 `i `b ]
@@ -347,7 +347,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;Lab1.c: 66:     TRISA = 0;
 [e ( _ioc_portB ..  ]
 "67
-[; ;Lab1.c: 67:     PORTA = 0x7F;
+[; ;Lab1.c: 67:     PORTA = 0xF0;
 [e = _RBIF -> -> 0 `i `b ]
 "68
 [; ;Lab1.c: 68:     TRISC = 0;
@@ -366,12 +366,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 "73
 [; ;Lab1.c: 73:     PORTE = 0;
 [e $ ! ! _RB0 142  ]
-[e ++ _PORTA -> -> 1 `i `Vuc ]
+[e ++ _PORTC -> -> 1 `i `Vuc ]
 [e :U 142 ]
 "74
 [; ;Lab1.c: 74: 
 [e $ ! ! _RB1 143  ]
-[e -- _PORTA -> -> 1 `i `Vuc ]
+[e -- _PORTC -> -> 1 `i `Vuc ]
 [e :U 143 ]
 "75
 [; ;Lab1.c: 75: 
@@ -424,7 +424,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _multiplex (1 _dispSel ]
 "96
 [; ;Lab1.c: 96:         }
-[e ( _alarm (2 , _PORTA _adc_val ]
+[e ( _alarm (2 , _PORTC _adc_val ]
 "97
 [; ;Lab1.c: 97:         else{
 }
@@ -452,7 +452,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _TRISA -> -> 0 `i `uc ]
 "105
 [; ;Lab1.c: 105:     if(var >= ref) RE2 = 1;
-[e = _PORTA -> -> 127 `i `uc ]
+[e = _PORTA -> -> 240 `i `uc ]
 "106
 [; ;Lab1.c: 106:     else RE2 = 0;
 [e = _TRISC -> -> 0 `i `uc ]
@@ -484,7 +484,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "124
 [e = _T0CS -> -> 0 `i `b ]
 "125
-[e = _TMR0 -> -> 100 `i `uc ]
+[e = _TMR0 -> -> 50 `i `uc ]
 "126
 [e = _T0IF -> -> 0 `i `b ]
 "127

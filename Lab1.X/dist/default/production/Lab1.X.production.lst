@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.41 build 20230208172133 
-                                                                                               Wed Jul 19 11:30:54 2023
+                                                                                               Thu Jul 20 16:50:09 2023
 
 Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og1 
      1                           	processor	16F887
@@ -464,8 +464,8 @@ Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og1
    450     001F                     _ADCON0bits	set	31
    451     0009                     _PORTE	set	9
    452     0008                     _PORTD	set	8
-   453     0007                     _PORTC	set	7
-   454     0005                     _PORTA	set	5
+   453     0005                     _PORTA	set	5
+   454     0007                     _PORTC	set	7
    455     0001                     _TMR0	set	1
    456     00F8                     _ADON	set	248
    457     005B                     _RBIE	set	91
@@ -776,7 +776,7 @@ Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og1
    762     014F  1283               	bcf	3,5	;RP0=0, select bank0
    763     0150  1303               	bcf	3,6	;RP1=0, select bank0
    764     0151  00A0               	movwf	alarm@var
-   765     0152  0805               	movf	5,w	;volatile
+   765     0152  0807               	movf	7,w	;volatile
    766     0153  120A  118A  2202  120A  118A  	fcall	_alarm
    767     0158  291F               	goto	l1491
    768     0159  120A  118A  280E   	ljmp	start
@@ -928,7 +928,7 @@ Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og1
    913     00DE  0185               	clrf	5	;volatile
    914                           
    915                           ;Lab1.c: 105:     if(var >= ref) RE2 = 1;
-   916     00DF  307F               	movlw	127
+   916     00DF  30F0               	movlw	240
    917     00E0  1283               	bcf	3,5	;RP0=0, select bank0
    918     00E1  1303               	bcf	3,6	;RP1=0, select bank0
    919     00E2  0085               	movwf	5	;volatile
@@ -992,7 +992,7 @@ Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og1
    977     0113                     l1377:
    978     0113  1281               	bcf	1,5	;volatile
    979     0114                     l1379:
-   980     0114  3064               	movlw	100
+   980     0114  3032               	movlw	50
    981     0115  1283               	bcf	3,5	;RP0=0, select bank0
    982     0116  1303               	bcf	3,6	;RP1=0, select bank0
    983     0117  0081               	movwf	1	;volatile
@@ -1752,7 +1752,7 @@ Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og1
   1735     01AE                     i1l1247:
   1736                           
   1737                           ;Lab1.c: 62: void setup(void){
-  1738     01AE  3064               	movlw	100
+  1738     01AE  3032               	movlw	50
   1739     01AF  0081               	movwf	1	;volatile
   1740     01B0                     i1l1249:
   1741                           
@@ -1773,7 +1773,7 @@ Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og1
   1756     01B5  120A  118A  215C  120A  118A  	fcall	_ioc_portB
   1757     01BA                     i1l1255:
   1758                           
-  1759                           ;Lab1.c: 67:     PORTA = 0x7F;
+  1759                           ;Lab1.c: 67:     PORTA = 0xF0;
   1760     01BA  100B               	bcf	11,0	;volatile
   1761     01BB                     i1l93:
   1762     01BB  0879               	movf	??_isr+2,w
@@ -1856,7 +1856,7 @@ Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og1
   1839     0162  3001               	movlw	1
   1840     0163  00FF               	movwf	btemp+1
   1841     0164  087F               	movf	btemp+1,w
-  1842     0165  0785               	addwf	5,f	;volatile
+  1842     0165  0787               	addwf	7,f	;volatile
   1843     0166                     i1l1089:
   1844                           
   1845                           ;Lab1.c: 74: 
@@ -1868,7 +1868,7 @@ Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og1
   1851     016A                     u24_20:
   1852     016A                     i1l1091:
   1853     016A  3001               	movlw	1
-  1854     016B  0285               	subwf	5,f	;volatile
+  1854     016B  0287               	subwf	7,f	;volatile
   1855     016C                     i1l1093:
   1856                           
   1857                           ;Lab1.c: 75: 
@@ -2156,7 +2156,7 @@ DATA                 0      0      16      12        0.0%
 
 
 Microchip Technology PIC Macro Assembler V2.41 build 20230208172133 
-Symbol Table                                                                                   Wed Jul 19 11:30:54 2023
+Symbol Table                                                                                   Thu Jul 20 16:50:09 2023
 
                     l111 0119                      l121 020E                      l114 01ED  
                     l116 01F1                      l119 020D                      l136 01E0  

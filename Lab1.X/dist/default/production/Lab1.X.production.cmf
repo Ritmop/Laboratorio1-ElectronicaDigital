@@ -11,6 +11,10 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
+$C:\Users\judah\AppData\Local\Temp\xcAsa7o.\driver_tmp_12.o
+reset_vec CODE 0 0 0 3 2 1
+end_init CODE 0 E E 3 2 1
+config CONFIG 4 2007 2007 2 2 1
 $dist/default/production\Lab1.X.production.o
 cinit CODE 0 11 11 E 2 1
 text1 CODE 0 183 183 21 2 1
@@ -30,10 +34,6 @@ cstackBANK0 BANK0 1 20 20 9 1 1
 intentry CODE 0 4 4 A 2 1
 bssBANK0 BANK0 1 29 29 3 1 1
 bssCOMMON COMMON 1 70 70 5 1 1
-config CONFIG 4 2007 2007 2 2 1
-$C:\Users\judah\AppData\Local\Temp\xcAsj3o.\driver_tmp_12.o
-reset_vec CODE 0 0 0 3 2 1
-end_init CODE 0 E E 3 2 1
 config CONFIG 4 2007 2007 2 2 1
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
@@ -80,21 +80,21 @@ STRING 21C-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\Lab1.X.production.o
-11 cinit CODE >988:C:\Users\judah\AppData\Local\Temp\xcAsj3o.\driver_tmp_1.s
-11 cinit CODE >991:C:\Users\judah\AppData\Local\Temp\xcAsj3o.\driver_tmp_1.s
-11 cinit CODE >1023:C:\Users\judah\AppData\Local\Temp\xcAsj3o.\driver_tmp_1.s
-12 cinit CODE >1024:C:\Users\judah\AppData\Local\Temp\xcAsj3o.\driver_tmp_1.s
-13 cinit CODE >1025:C:\Users\judah\AppData\Local\Temp\xcAsj3o.\driver_tmp_1.s
-14 cinit CODE >1026:C:\Users\judah\AppData\Local\Temp\xcAsj3o.\driver_tmp_1.s
-15 cinit CODE >1027:C:\Users\judah\AppData\Local\Temp\xcAsj3o.\driver_tmp_1.s
-16 cinit CODE >1030:C:\Users\judah\AppData\Local\Temp\xcAsj3o.\driver_tmp_1.s
-17 cinit CODE >1031:C:\Users\judah\AppData\Local\Temp\xcAsj3o.\driver_tmp_1.s
-18 cinit CODE >1032:C:\Users\judah\AppData\Local\Temp\xcAsj3o.\driver_tmp_1.s
-19 cinit CODE >1033:C:\Users\judah\AppData\Local\Temp\xcAsj3o.\driver_tmp_1.s
-1A cinit CODE >1034:C:\Users\judah\AppData\Local\Temp\xcAsj3o.\driver_tmp_1.s
-1B cinit CODE >1040:C:\Users\judah\AppData\Local\Temp\xcAsj3o.\driver_tmp_1.s
-1B cinit CODE >1042:C:\Users\judah\AppData\Local\Temp\xcAsj3o.\driver_tmp_1.s
-1C cinit CODE >1043:C:\Users\judah\AppData\Local\Temp\xcAsj3o.\driver_tmp_1.s
+11 cinit CODE >988:C:\Users\judah\AppData\Local\Temp\xcAsa7o.\driver_tmp_1.s
+11 cinit CODE >991:C:\Users\judah\AppData\Local\Temp\xcAsa7o.\driver_tmp_1.s
+11 cinit CODE >1023:C:\Users\judah\AppData\Local\Temp\xcAsa7o.\driver_tmp_1.s
+12 cinit CODE >1024:C:\Users\judah\AppData\Local\Temp\xcAsa7o.\driver_tmp_1.s
+13 cinit CODE >1025:C:\Users\judah\AppData\Local\Temp\xcAsa7o.\driver_tmp_1.s
+14 cinit CODE >1026:C:\Users\judah\AppData\Local\Temp\xcAsa7o.\driver_tmp_1.s
+15 cinit CODE >1027:C:\Users\judah\AppData\Local\Temp\xcAsa7o.\driver_tmp_1.s
+16 cinit CODE >1030:C:\Users\judah\AppData\Local\Temp\xcAsa7o.\driver_tmp_1.s
+17 cinit CODE >1031:C:\Users\judah\AppData\Local\Temp\xcAsa7o.\driver_tmp_1.s
+18 cinit CODE >1032:C:\Users\judah\AppData\Local\Temp\xcAsa7o.\driver_tmp_1.s
+19 cinit CODE >1033:C:\Users\judah\AppData\Local\Temp\xcAsa7o.\driver_tmp_1.s
+1A cinit CODE >1034:C:\Users\judah\AppData\Local\Temp\xcAsa7o.\driver_tmp_1.s
+1B cinit CODE >1040:C:\Users\judah\AppData\Local\Temp\xcAsa7o.\driver_tmp_1.s
+1B cinit CODE >1042:C:\Users\judah\AppData\Local\Temp\xcAsa7o.\driver_tmp_1.s
+1C cinit CODE >1043:C:\Users\judah\AppData\Local\Temp\xcAsa7o.\driver_tmp_1.s
 4 intentry CODE >58:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
 20F text11 CODE >49:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\ADC_lib.c
 210 text11 CODE >50:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\ADC_lib.c
@@ -273,20 +273,20 @@ _T0IE 5D 0 ABS 0 - dist/default/production\Lab1.X.production.o
 _T0IF 5A 0 ABS 0 - dist/default/production\Lab1.X.production.o
 _TMR0 1 0 ABS 0 - dist/default/production\Lab1.X.production.o
 _WPUB 95 0 ABS 0 - dist/default/production\Lab1.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\judah\AppData\Local\Temp\xcAsj3o.\driver_tmp_12.o
+___sp 0 0 STACK 2 stack C:\Users\judah\AppData\Local\Temp\xcAsa7o.\driver_tmp_12.o
 _main 234 0 CODE 0 maintext dist/default/production\Lab1.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\Lab1.X.production.o
-start 1C 0 CODE 0 init C:\Users\judah\AppData\Local\Temp\xcAsj3o.\driver_tmp_12.o
+start 1C 0 CODE 0 init C:\Users\judah\AppData\Local\Temp\xcAsa7o.\driver_tmp_12.o
 __HbssCOMMON 0 0 ABS 0 bssCOMMON -
 _OPTION_REGbits 81 0 ABS 0 - dist/default/production\Lab1.X.production.o
 __end_of_adc_sel_channel 438 0 CODE 0 text11 dist/default/production\Lab1.X.production.o
 __Hpowerup 0 0 CODE 0 powerup -
-intlevel0 0 0 ENTRY 0 functab C:\Users\judah\AppData\Local\Temp\xcAsj3o.\driver_tmp_12.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\judah\AppData\Local\Temp\xcAsj3o.\driver_tmp_12.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\judah\AppData\Local\Temp\xcAsj3o.\driver_tmp_12.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\judah\AppData\Local\Temp\xcAsj3o.\driver_tmp_12.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\judah\AppData\Local\Temp\xcAsj3o.\driver_tmp_12.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\judah\AppData\Local\Temp\xcAsj3o.\driver_tmp_12.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\judah\AppData\Local\Temp\xcAsa7o.\driver_tmp_12.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\judah\AppData\Local\Temp\xcAsa7o.\driver_tmp_12.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\judah\AppData\Local\Temp\xcAsa7o.\driver_tmp_12.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\judah\AppData\Local\Temp\xcAsa7o.\driver_tmp_12.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\judah\AppData\Local\Temp\xcAsa7o.\driver_tmp_12.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\judah\AppData\Local\Temp\xcAsa7o.\driver_tmp_12.o
 __LbssCOMMON 0 0 ABS 0 bssCOMMON -
 _OSCCONbits 8F 0 ABS 0 - dist/default/production\Lab1.X.production.o
 adc_init@channel 22 0 BANK0 1 cstackBANK0 dist/default/production\Lab1.X.production.o
@@ -303,14 +303,14 @@ _dispSel 2B 0 BANK0 1 bssBANK0 dist/default/production\Lab1.X.production.o
 _nibbles 29 0 BANK0 1 bssBANK0 dist/default/production\Lab1.X.production.o
 __Lmaintext 0 0 ABS 0 maintext -
 _adc_val 74 0 COMMON 1 bssCOMMON dist/default/production\Lab1.X.production.o
-___stackhi 0 0 ABS 0 - C:\Users\judah\AppData\Local\Temp\xcAsj3o.\driver_tmp_12.o
-___stacklo 0 0 ABS 0 - C:\Users\judah\AppData\Local\Temp\xcAsj3o.\driver_tmp_12.o
+___stackhi 0 0 ABS 0 - C:\Users\judah\AppData\Local\Temp\xcAsa7o.\driver_tmp_12.o
+___stacklo 0 0 ABS 0 - C:\Users\judah\AppData\Local\Temp\xcAsa7o.\driver_tmp_12.o
 ?_split_nibbles 20 0 BANK0 1 cstackBANK0 dist/default/production\Lab1.X.production.o
 start_initialization 22 0 CODE 0 cinit dist/default/production\Lab1.X.production.o
 split_nibbles@high_nib 26 0 BANK0 1 cstackBANK0 dist/default/production\Lab1.X.production.o
 __pcstackBANK0 20 0 BANK0 1 cstackBANK0 dist/default/production\Lab1.X.production.o
 hex_to_7seg@hex 22 0 BANK0 1 cstackBANK0 dist/default/production\Lab1.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\judah\AppData\Local\Temp\xcAsj3o.\driver_tmp_12.o
+___int_sp 0 0 STACK 2 stack C:\Users\judah\AppData\Local\Temp\xcAsa7o.\driver_tmp_12.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -365,7 +365,7 @@ __end_of_isr 388 0 CODE 0 text9 dist/default/production\Lab1.X.production.o
 _split_nibbles 306 0 CODE 0 text1 dist/default/production\Lab1.X.production.o
 __Lintentry 8 0 CODE 0 intentry -
 __end_of_iocb_init 3C2 0 CODE 0 text3 dist/default/production\Lab1.X.production.o
-reset_vec 0 0 CODE 0 reset_vec C:\Users\judah\AppData\Local\Temp\xcAsj3o.\driver_tmp_12.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\judah\AppData\Local\Temp\xcAsa7o.\driver_tmp_12.o
 iocb_init@pinesB 20 0 BANK0 1 cstackBANK0 dist/default/production\Lab1.X.production.o
 __LbssBANK0 0 0 ABS 0 bssBANK0 -
 _ioc_portB 2B8 0 CODE 0 text10 dist/default/production\Lab1.X.production.o

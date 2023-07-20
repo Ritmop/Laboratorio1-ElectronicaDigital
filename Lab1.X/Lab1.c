@@ -37,7 +37,7 @@
 
 /*----------------------- GLOBAL VARIABLES & CONSTANTS -----------------------*/
 #define _XTAL_FREQ 8000000  //Constante para delay
-#define _TMR0n 100   //TMR0 load value
+#define _TMR0n 50   //TMR0 load value
 uint8_t adc_val;    //ADC read value
 uint16_t nibbles;   //High & Low nibbles in a single reg
 uint8_t high_nib;   //High nibble

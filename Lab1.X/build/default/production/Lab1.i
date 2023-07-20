@@ -2689,7 +2689,7 @@ void __attribute__((picinterrupt(("")))) isr(void){
     if(T0IF){
         dispSel++;
 
-        TMR0 = 100;
+        TMR0 = 50;
         T0IF = 0;
     }
     if(RBIF){
@@ -2700,8 +2700,8 @@ void __attribute__((picinterrupt(("")))) isr(void){
 
 
 void ioc_portB(void){
-    if(!RB0) PORTA++;
-    if(!RB1) PORTA--;
+    if(!RB0) PORTC++;
+    if(!RB1) PORTC--;
     if(!RB2) adc_sel_channel(13);
     if(!RB3) adc_sel_channel(11);
 }
@@ -2723,7 +2723,7 @@ int main(void) {
         disp1 = hex_to_7seg(high_nib);
         multiplex(dispSel);
 
-        alarm(PORTA,adc_val);
+        alarm(PORTC,adc_val);
     }
 }
 
@@ -2732,7 +2732,7 @@ void setup(void){
     ANSEL = 0;
     ANSELH= 0b00101000;
     TRISA = 0;
-    PORTA = 0x7F;
+    PORTA = 0xF0;
     TRISC = 0;
     PORTC = 0;
     TRISD = 0;
@@ -2752,7 +2752,7 @@ void setup(void){
     T0IE = 1;
     OPTION_REGbits.PS = 0b000;
     T0CS = 0;
-    TMR0 = 100;
+    TMR0 = 50;
     T0IF = 0;
 }
 
