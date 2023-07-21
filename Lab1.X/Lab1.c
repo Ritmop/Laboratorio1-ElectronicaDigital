@@ -5,7 +5,8 @@
  *Compiler: XC8 (v2.41)
  * 
  * Program: Contador en PORTA con botones e interrupciones
- * Hardware:
+ * Hardware: 8 Leds Puerto A, 2 display 7 seg multiplexados Puerto D
+ *           4 botones Puerto B (0-3), Potenciometro AN13 y led RE2.
  * 
  * Created: July 18, 2023
  * Last updated:
