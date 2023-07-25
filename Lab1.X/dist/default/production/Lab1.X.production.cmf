@@ -11,7 +11,7 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\judah\AppData\Local\Temp\xcAsa7o.\driver_tmp_12.o
+$C:\Users\judah\AppData\Local\Temp\xcAsffs.\driver_tmp_12.o
 reset_vec CODE 0 0 0 3 2 1
 end_init CODE 0 E E 3 2 1
 config CONFIG 4 2007 2007 2 2 1
@@ -80,50 +80,50 @@ STRING 21C-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\Lab1.X.production.o
-11 cinit CODE >988:C:\Users\judah\AppData\Local\Temp\xcAsa7o.\driver_tmp_1.s
-11 cinit CODE >991:C:\Users\judah\AppData\Local\Temp\xcAsa7o.\driver_tmp_1.s
-11 cinit CODE >1023:C:\Users\judah\AppData\Local\Temp\xcAsa7o.\driver_tmp_1.s
-12 cinit CODE >1024:C:\Users\judah\AppData\Local\Temp\xcAsa7o.\driver_tmp_1.s
-13 cinit CODE >1025:C:\Users\judah\AppData\Local\Temp\xcAsa7o.\driver_tmp_1.s
-14 cinit CODE >1026:C:\Users\judah\AppData\Local\Temp\xcAsa7o.\driver_tmp_1.s
-15 cinit CODE >1027:C:\Users\judah\AppData\Local\Temp\xcAsa7o.\driver_tmp_1.s
-16 cinit CODE >1030:C:\Users\judah\AppData\Local\Temp\xcAsa7o.\driver_tmp_1.s
-17 cinit CODE >1031:C:\Users\judah\AppData\Local\Temp\xcAsa7o.\driver_tmp_1.s
-18 cinit CODE >1032:C:\Users\judah\AppData\Local\Temp\xcAsa7o.\driver_tmp_1.s
-19 cinit CODE >1033:C:\Users\judah\AppData\Local\Temp\xcAsa7o.\driver_tmp_1.s
-1A cinit CODE >1034:C:\Users\judah\AppData\Local\Temp\xcAsa7o.\driver_tmp_1.s
-1B cinit CODE >1040:C:\Users\judah\AppData\Local\Temp\xcAsa7o.\driver_tmp_1.s
-1B cinit CODE >1042:C:\Users\judah\AppData\Local\Temp\xcAsa7o.\driver_tmp_1.s
-1C cinit CODE >1043:C:\Users\judah\AppData\Local\Temp\xcAsa7o.\driver_tmp_1.s
-4 intentry CODE >58:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
+11 cinit CODE >988:C:\Users\judah\AppData\Local\Temp\xcAsffs.\driver_tmp_1.s
+11 cinit CODE >991:C:\Users\judah\AppData\Local\Temp\xcAsffs.\driver_tmp_1.s
+11 cinit CODE >1023:C:\Users\judah\AppData\Local\Temp\xcAsffs.\driver_tmp_1.s
+12 cinit CODE >1024:C:\Users\judah\AppData\Local\Temp\xcAsffs.\driver_tmp_1.s
+13 cinit CODE >1025:C:\Users\judah\AppData\Local\Temp\xcAsffs.\driver_tmp_1.s
+14 cinit CODE >1026:C:\Users\judah\AppData\Local\Temp\xcAsffs.\driver_tmp_1.s
+15 cinit CODE >1027:C:\Users\judah\AppData\Local\Temp\xcAsffs.\driver_tmp_1.s
+16 cinit CODE >1030:C:\Users\judah\AppData\Local\Temp\xcAsffs.\driver_tmp_1.s
+17 cinit CODE >1031:C:\Users\judah\AppData\Local\Temp\xcAsffs.\driver_tmp_1.s
+18 cinit CODE >1032:C:\Users\judah\AppData\Local\Temp\xcAsffs.\driver_tmp_1.s
+19 cinit CODE >1033:C:\Users\judah\AppData\Local\Temp\xcAsffs.\driver_tmp_1.s
+1A cinit CODE >1034:C:\Users\judah\AppData\Local\Temp\xcAsffs.\driver_tmp_1.s
+1B cinit CODE >1040:C:\Users\judah\AppData\Local\Temp\xcAsffs.\driver_tmp_1.s
+1B cinit CODE >1042:C:\Users\judah\AppData\Local\Temp\xcAsffs.\driver_tmp_1.s
+1C cinit CODE >1043:C:\Users\judah\AppData\Local\Temp\xcAsffs.\driver_tmp_1.s
+4 intentry CODE >59:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
 20F text11 CODE >49:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\ADC_lib.c
 210 text11 CODE >50:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\ADC_lib.c
 21B text11 CODE >51:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\ADC_lib.c
-15C text10 CODE >72:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
 15C text10 CODE >73:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
-166 text10 CODE >74:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
-16C text10 CODE >75:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
-176 text10 CODE >76:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
-182 text10 CODE >77:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
-1A4 text9 CODE >58:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
+15C text10 CODE >74:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
+166 text10 CODE >75:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
+16C text10 CODE >76:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
+176 text10 CODE >77:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
+182 text10 CODE >78:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
 1A4 text9 CODE >59:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
-1A8 text9 CODE >60:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
-1AE text9 CODE >62:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
-1B0 text9 CODE >63:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
-1B1 text9 CODE >65:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
-1B5 text9 CODE >66:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
-1BA text9 CODE >67:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
-1BB text9 CODE >69:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
+1A4 text9 CODE >60:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
+1A8 text9 CODE >61:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
+1AE text9 CODE >63:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
+1B0 text9 CODE >64:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
+1B1 text9 CODE >66:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
+1B5 text9 CODE >67:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
+1BA text9 CODE >68:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
+1BB text9 CODE >70:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
 1F2 text8 CODE >42:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\ADC_lib.c
 1F2 text8 CODE >43:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\ADC_lib.c
 1F5 text8 CODE >44:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\ADC_lib.c
 1F9 text8 CODE >45:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\ADC_lib.c
 201 text8 CODE >46:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\ADC_lib.c
-202 text7 CODE >142:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
-205 text7 CODE >143:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
-207 text7 CODE >143:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
-20D text7 CODE >144:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
-20E text7 CODE >145:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
+202 text7 CODE >143:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
+205 text7 CODE >144:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
+207 text7 CODE >144:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
+20D text7 CODE >145:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
+20E text7 CODE >146:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
 1F text6 CODE >21:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\disp_7seg.c
 22 text6 CODE >22:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\disp_7seg.c
 23 text6 CODE >24:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\disp_7seg.c
@@ -161,17 +161,17 @@ $dist/default/production\Lab1.X.production.o
 77 text6 CODE >55:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\disp_7seg.c
 7A text6 CODE >55:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\disp_7seg.c
 7D text6 CODE >56:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\disp_7seg.c
-1E1 text5 CODE >129:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
-1E4 text5 CODE >130:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
-1E8 text5 CODE >131:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
-1E9 text5 CODE >132:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
-1EB text5 CODE >133:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
-1EC text5 CODE >134:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
-1ED text5 CODE >135:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
+1E1 text5 CODE >130:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
+1E4 text5 CODE >131:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
+1E8 text5 CODE >132:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
+1E9 text5 CODE >133:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
+1EB text5 CODE >134:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
+1EC text5 CODE >135:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
 1ED text5 CODE >136:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
-1EE text5 CODE >137:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
-1F0 text5 CODE >138:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
-1F1 text5 CODE >140:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
+1ED text5 CODE >137:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
+1EE text5 CODE >138:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
+1F0 text5 CODE >139:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
+1F1 text5 CODE >141:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
 7E text4 CODE >4:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\ADC_lib.c
 81 text4 CODE >13:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\ADC_lib.c
 8B text4 CODE >14:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\ADC_lib.c
@@ -202,28 +202,28 @@ D6 text4 CODE >39:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\Electronic
 1D7 text3 CODE >9:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\iocb_init.c
 1DF text3 CODE >10:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\iocb_init.c
 1E0 text3 CODE >11:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\iocb_init.c
-D7 text2 CODE >100:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
-D7 text2 CODE >102:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
-DA text2 CODE >103:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
-DC text2 CODE >104:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
-DF text2 CODE >105:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
-E3 text2 CODE >106:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
-E6 text2 CODE >107:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
-E9 text2 CODE >108:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
-EC text2 CODE >109:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
-EF text2 CODE >110:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
-F2 text2 CODE >111:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
-F5 text2 CODE >114:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
-F9 text2 CODE >115:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
-FA text2 CODE >117:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
-100 text2 CODE >118:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
-10D text2 CODE >121:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
-10E text2 CODE >122:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
-10F text2 CODE >123:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
-113 text2 CODE >124:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
-114 text2 CODE >125:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
-118 text2 CODE >126:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
-119 text2 CODE >127:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
+D7 text2 CODE >101:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
+D7 text2 CODE >103:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
+DA text2 CODE >104:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
+DC text2 CODE >105:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
+DF text2 CODE >106:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
+E3 text2 CODE >107:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
+E6 text2 CODE >108:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
+E9 text2 CODE >109:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
+EC text2 CODE >110:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
+EF text2 CODE >111:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
+F2 text2 CODE >112:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
+F5 text2 CODE >115:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
+F9 text2 CODE >116:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
+FA text2 CODE >118:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
+100 text2 CODE >119:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
+10D text2 CODE >122:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
+10E text2 CODE >123:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
+10F text2 CODE >124:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
+113 text2 CODE >125:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
+114 text2 CODE >126:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
+118 text2 CODE >127:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
+119 text2 CODE >128:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
 183 text1 CODE >59:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\disp_7seg.c
 186 text1 CODE >62:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\disp_7seg.c
 189 text1 CODE >63:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\disp_7seg.c
@@ -231,16 +231,16 @@ FA text2 CODE >117:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\Electroni
 18F text1 CODE >63:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\disp_7seg.c
 194 text1 CODE >64:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\disp_7seg.c
 1A3 text1 CODE >65:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\disp_7seg.c
-11A maintext CODE >83:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
 11A maintext CODE >84:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
-11F maintext CODE >88:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
-128 maintext CODE >89:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
-134 maintext CODE >90:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
-136 maintext CODE >91:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
-138 maintext CODE >92:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
-13F maintext CODE >93:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
-146 maintext CODE >94:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
-14E maintext CODE >96:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
+11A maintext CODE >85:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
+11F maintext CODE >89:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
+128 maintext CODE >90:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
+134 maintext CODE >91:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
+136 maintext CODE >92:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
+138 maintext CODE >93:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
+13F maintext CODE >94:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
+146 maintext CODE >95:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
+14E maintext CODE >97:C:\Users\judah\OneDrive\Escritorio\Proyectos Varios\ElectronicaDigital2\Laboratorio1\Lab1.X\Lab1.c
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -273,20 +273,20 @@ _T0IE 5D 0 ABS 0 - dist/default/production\Lab1.X.production.o
 _T0IF 5A 0 ABS 0 - dist/default/production\Lab1.X.production.o
 _TMR0 1 0 ABS 0 - dist/default/production\Lab1.X.production.o
 _WPUB 95 0 ABS 0 - dist/default/production\Lab1.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\judah\AppData\Local\Temp\xcAsa7o.\driver_tmp_12.o
+___sp 0 0 STACK 2 stack C:\Users\judah\AppData\Local\Temp\xcAsffs.\driver_tmp_12.o
 _main 234 0 CODE 0 maintext dist/default/production\Lab1.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\Lab1.X.production.o
-start 1C 0 CODE 0 init C:\Users\judah\AppData\Local\Temp\xcAsa7o.\driver_tmp_12.o
+start 1C 0 CODE 0 init C:\Users\judah\AppData\Local\Temp\xcAsffs.\driver_tmp_12.o
 __HbssCOMMON 0 0 ABS 0 bssCOMMON -
 _OPTION_REGbits 81 0 ABS 0 - dist/default/production\Lab1.X.production.o
 __end_of_adc_sel_channel 438 0 CODE 0 text11 dist/default/production\Lab1.X.production.o
 __Hpowerup 0 0 CODE 0 powerup -
-intlevel0 0 0 ENTRY 0 functab C:\Users\judah\AppData\Local\Temp\xcAsa7o.\driver_tmp_12.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\judah\AppData\Local\Temp\xcAsa7o.\driver_tmp_12.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\judah\AppData\Local\Temp\xcAsa7o.\driver_tmp_12.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\judah\AppData\Local\Temp\xcAsa7o.\driver_tmp_12.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\judah\AppData\Local\Temp\xcAsa7o.\driver_tmp_12.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\judah\AppData\Local\Temp\xcAsa7o.\driver_tmp_12.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\judah\AppData\Local\Temp\xcAsffs.\driver_tmp_12.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\judah\AppData\Local\Temp\xcAsffs.\driver_tmp_12.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\judah\AppData\Local\Temp\xcAsffs.\driver_tmp_12.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\judah\AppData\Local\Temp\xcAsffs.\driver_tmp_12.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\judah\AppData\Local\Temp\xcAsffs.\driver_tmp_12.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\judah\AppData\Local\Temp\xcAsffs.\driver_tmp_12.o
 __LbssCOMMON 0 0 ABS 0 bssCOMMON -
 _OSCCONbits 8F 0 ABS 0 - dist/default/production\Lab1.X.production.o
 adc_init@channel 22 0 BANK0 1 cstackBANK0 dist/default/production\Lab1.X.production.o
@@ -303,14 +303,14 @@ _dispSel 2B 0 BANK0 1 bssBANK0 dist/default/production\Lab1.X.production.o
 _nibbles 29 0 BANK0 1 bssBANK0 dist/default/production\Lab1.X.production.o
 __Lmaintext 0 0 ABS 0 maintext -
 _adc_val 74 0 COMMON 1 bssCOMMON dist/default/production\Lab1.X.production.o
-___stackhi 0 0 ABS 0 - C:\Users\judah\AppData\Local\Temp\xcAsa7o.\driver_tmp_12.o
-___stacklo 0 0 ABS 0 - C:\Users\judah\AppData\Local\Temp\xcAsa7o.\driver_tmp_12.o
+___stackhi 0 0 ABS 0 - C:\Users\judah\AppData\Local\Temp\xcAsffs.\driver_tmp_12.o
+___stacklo 0 0 ABS 0 - C:\Users\judah\AppData\Local\Temp\xcAsffs.\driver_tmp_12.o
 ?_split_nibbles 20 0 BANK0 1 cstackBANK0 dist/default/production\Lab1.X.production.o
 start_initialization 22 0 CODE 0 cinit dist/default/production\Lab1.X.production.o
 split_nibbles@high_nib 26 0 BANK0 1 cstackBANK0 dist/default/production\Lab1.X.production.o
 __pcstackBANK0 20 0 BANK0 1 cstackBANK0 dist/default/production\Lab1.X.production.o
 hex_to_7seg@hex 22 0 BANK0 1 cstackBANK0 dist/default/production\Lab1.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\judah\AppData\Local\Temp\xcAsa7o.\driver_tmp_12.o
+___int_sp 0 0 STACK 2 stack C:\Users\judah\AppData\Local\Temp\xcAsffs.\driver_tmp_12.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -365,7 +365,7 @@ __end_of_isr 388 0 CODE 0 text9 dist/default/production\Lab1.X.production.o
 _split_nibbles 306 0 CODE 0 text1 dist/default/production\Lab1.X.production.o
 __Lintentry 8 0 CODE 0 intentry -
 __end_of_iocb_init 3C2 0 CODE 0 text3 dist/default/production\Lab1.X.production.o
-reset_vec 0 0 CODE 0 reset_vec C:\Users\judah\AppData\Local\Temp\xcAsa7o.\driver_tmp_12.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\judah\AppData\Local\Temp\xcAsffs.\driver_tmp_12.o
 iocb_init@pinesB 20 0 BANK0 1 cstackBANK0 dist/default/production\Lab1.X.production.o
 __LbssBANK0 0 0 ABS 0 bssBANK0 -
 _ioc_portB 2B8 0 CODE 0 text10 dist/default/production\Lab1.X.production.o

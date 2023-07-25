@@ -7,7 +7,7 @@
 # 1 "C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
 # 1 "Lab1.c" 2
-# 15 "Lab1.c"
+# 16 "Lab1.c"
 # 1 "C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\\pic\\include\\xc.h" 1 3
 # 18 "C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -2625,13 +2625,13 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 29 "C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\\pic\\include\\xc.h" 2 3
-# 15 "Lab1.c" 2
+# 16 "Lab1.c" 2
 
 
 # 1 "./iocb_init.h" 1
 # 13 "./iocb_init.h"
 void iocb_init(uint8_t);
-# 17 "Lab1.c" 2
+# 18 "Lab1.c" 2
 
 # 1 "./ADC_lib.h" 1
 # 12 "./ADC_lib.h"
@@ -2639,13 +2639,13 @@ void adc_init(uint8_t J, uint8_t R, uint8_t clock, uint8_t channel);
 uint16_t adc_read(void);
 void adc_sel_channel(uint8_t channel);
 uint8_t adc_get_channel(void);
-# 18 "Lab1.c" 2
+# 19 "Lab1.c" 2
 
 # 1 "./disp_7seg.h" 1
 # 13 "./disp_7seg.h"
 uint8_t hex_to_7seg(uint8_t hex);
 uint16_t split_nibbles(uint8_t hex);
-# 19 "Lab1.c" 2
+# 20 "Lab1.c" 2
 
 
 
@@ -2700,8 +2700,8 @@ void __attribute__((picinterrupt(("")))) isr(void){
 
 
 void ioc_portB(void){
-    if(!RB0) PORTC++;
-    if(!RB1) PORTC--;
+    if(!RB0) PORTA++;
+    if(!RB1) PORTA--;
     if(!RB2) adc_sel_channel(13);
     if(!RB3) adc_sel_channel(11);
 }
@@ -2723,7 +2723,7 @@ int main(void) {
         disp1 = hex_to_7seg(high_nib);
         multiplex(dispSel);
 
-        alarm(PORTC,adc_val);
+        alarm(PORTA,adc_val);
     }
 }
 
@@ -2732,7 +2732,7 @@ void setup(void){
     ANSEL = 0;
     ANSELH= 0b00101000;
     TRISA = 0;
-    PORTA = 0xF0;
+    PORTA = 0x7F;
     TRISC = 0;
     PORTC = 0;
     TRISD = 0;
